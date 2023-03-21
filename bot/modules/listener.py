@@ -570,7 +570,7 @@ class MirrorLeechListener:
                     LOGGER.warning(e)
 
             if not self.isPrivate and config_dict['SAVE_MSG']:
-                buttons.sbutton('Save This Message', 'save', 'footer')
+                buttons.sbutton('ꜱᴀᴠᴇ ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ', 'save', 'footer')
 
             if not BOT_PM_X or self.message.chat.type == 'private':
                 if config_dict['PICS']:
