@@ -392,7 +392,7 @@ def start_clone(listelem):
                             parse_mode=ParseMode.HTML)
             for chatid in user_data['mirror_logs']:
                 if config_dict['SAVE_MSG']:
-                    button.sbutton('Save This Message', 'save', 'footer')
+                    button.sbutton('ꜱᴀᴠᴇ ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ', 'save', 'footer')
                 bot.sendMessage(chat_id=chatid, text=result + cc, reply_markup=button.build_menu(2), parse_mode=ParseMode.HTML)
         except Exception as e:
             LOGGER.warning(e)
@@ -405,7 +405,7 @@ def start_clone(listelem):
     elif not BOT_PM_X and 'mirror_logs' in user_data:
         try:
             if config_dict['SAVE_MSG']:
-                button.sbutton('Save This Message', 'save', 'footer')
+                button.sbutton('ꜱᴀᴠᴇ ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ', 'save', 'footer')
             for chatid in user_data['mirror_logs']:
                 bot.sendMessage(chat_id=chatid, text=result + cc, reply_markup=button.build_menu(2), parse_mode=ParseMode.HTML)
             if config_dict['PICS']:
@@ -418,7 +418,7 @@ def start_clone(listelem):
     elif not BOT_PM_X and not 'mirror_logs' in user_data:
         try:
             if config_dict['SAVE_MSG'] and message.chat.type != 'private':
-                button.sbutton('Save This Message', 'save', 'footer')
+                button.sbutton('ꜱᴀᴠᴇ ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ', 'save', 'footer')
             if config_dict['PICS']:
                 msg = sendPhoto(result + cc + pmwarn + logwarn + warnmsg, bot, message, rchoice(config_dict['PICS']), button.build_menu(2))
             else:
