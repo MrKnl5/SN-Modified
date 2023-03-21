@@ -414,7 +414,7 @@ class MirrorLeechListener:
                 msg += f'\n<b>ʟᴇᴇᴄʜ ʙʏ: </b>{self.tag}\n\n'
 
             if not self.isPrivate and config_dict['SAVE_MSG']:
-                buttons.sbutton('Save This Message', 'save', 'footer')
+                buttons.sbutton('ꜱᴀᴠᴇ ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ', 'save', 'footer')
 
             if not files:
                 if config_dict['PICS']:
