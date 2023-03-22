@@ -6,9 +6,9 @@ So all credit goes to the respective owner
 I have just edited some fonts so that your mirror bot can look cool.
 
 Deployment Method :-
-1. Fork / Template my repo.
+1. Fork / Template the original repo (link given above)
 
-2. Rename config_sample.env to config.env and then add the vars u need in config.env.
+2. Rename config_sample.env to config.env and then add the vars u need in config.env. Make sure that in `UPSTREAM_REPO` var it should be like this `UPSTREAM_REPO = "https://github.com/MrKartik5/SN-Modified"` and UPSTREAM_BRANCH will be master.
 
 3. Upload token.pickle / accounts directory / credentials.json in heroku branch (token and credentials is must without these uploading to gdrive won't work)
 
@@ -17,9 +17,11 @@ Deployment Method :-
    `HEROKU_APP_NAME` - Your heroku appname make sure it is unique and must be same as the BASE_URL_OF_BOT in config.env        
    `HEROKU_API_KEY` - Your heroku api key which u can get from your heroku account settings.
    
-5. Go to Actions tab and then run the workflow (heroku one).
+5. Now go the update.py file of heroku branch and change the default upstream link to my modified repo and do the same for the update.py for master branch.
 
-6. If you see Info - Bot Sarted !!! Message in your heroku logs it means bot successfully deployed.
+6. Go to Actions tab and then run the workflow (heroku branch).
+
+7. If you see Info - Bot Sarted !!! Message in your heroku logs it means bot successfully deployed.
 
 
 Don't set EMOJI_THEME var to true. My edits won't work then.
